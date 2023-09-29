@@ -360,11 +360,23 @@ Sidebar
   box-shadow: var(--red-dark);
   transition: var(--transition);
   /* toggle logic */
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
 }
 @media screen and (min-width: 676px) {
   .sidebar {
     width: 400px;
   }
+}
+
+.show-sidebar {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0%);
+  transition: var(--transition);
 }
 .sidebar-header {
   display: flex;
